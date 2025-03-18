@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle at center, #1a1a2e, #16213e, #0f3460);
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00f7ff;
+    text-shadow: 0 0 10px #00f7ff;
+    margin-bottom: 15px;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+    width: 500px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 255, 255, 0.2);
+    animation: glow 2s infinite alternate;
+}
+
+/* Glowing Effect */
+@keyframes glow {
+    0% { box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.3); }
+    100% { box-shadow: 0px 0px 25px rgba(0, 255, 255, 0.8); }
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    outline: none;
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: #00f7ff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+}
+
+.btn:hover {
+    background: rgba(0, 255, 255, 0.5);
+    transform: scale(1.1);
+    color: black;
+}
+
+.operator {
+    background: rgba(255, 69, 0, 0.8);
+    color: white;
+    box-shadow: 0px 0px 10px rgba(255, 69, 0, 0.8);
+}
+
+.operator:hover {
+    background: rgb(6, 99, 124);
+}
+
+.equal {
+    background: rgba(0, 123, 255, 0.9);
+    grid-column: span 2;
+    color: white;
+}
+
+.equal:hover {
+    background: rgba(0, 123, 255, 1);
+}
+
+.zero {
+    grid-column: span 2;
+}
